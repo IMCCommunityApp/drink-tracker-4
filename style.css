@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 420px;
+    margin: auto;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin: 20px 0;
+}
+
+.day {
+    padding: 10px;
+    border-radius: 6px;
+    background: #eee;
+    cursor: pointer;
+}
+
+.green {
+    background: #4CAF50;
+    color: white;
+}
+
+.orange {
+    background: #FF9800;
+    color: white;
+}
+
+.red {
+    background: #E53935;
+    color: white;
+}

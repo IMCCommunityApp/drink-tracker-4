@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Tracker</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🍺 Drink Tracker</h1>
+
+    <div id="calendar"></div>
+
+    <section>
+        <h2>Dag registreren</h2>
+        <input type="number" id="units" min="0" placeholder="Aantal eenheden">
+        <button onclick="saveDay()">Opslaan</button>
+    </section>
+
+    <section>
+        <h2>Overzicht</h2>
+        <p>Vandaag: <span id="todayTotal">0</span></p>
+        <p>Deze week: <span id="weekTotal">0</span></p>
+        <p>Deze maand: <span id="monthTotal">0</span></p>
+    </section>
+
+    <button onclick="exportCSV()">📤 Export naar Excel</button>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
+
+</body>
+
+</html>
