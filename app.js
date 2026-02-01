@@ -44,8 +44,14 @@ function saveDay() {
     const units = parseInt(document.getElementById("units").value || 0);
     data[selectedDate] = { units };
 
-    localStorage.setItem("drinkData", JSON.stringify(data));
-    buildCalendar();
+    const units = parseInt(document.getElementById("units").value || 0);
+    const note = document.getElementById("note").value || "";
+
+    data[selectedDate] = {
+        units: units,
+        note: note
+    };
+
 }
 
 function updateTotals() {

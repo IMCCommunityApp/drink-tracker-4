@@ -21,13 +21,19 @@
         <input type="number" id="units" min="0" placeholder="Aantal eenheden">
         <button onclick="saveDay()">Opslaan</button>
     </section>
-<textarea id="note" placeholder="Notitie (optioneel)"></textarea>
+    <textarea id="note" placeholder="Notitie (optioneel)"></textarea>
 
     <section>
         <h2>Overzicht</h2>
         <p>Vandaag: <span id="todayTotal">0</span></p>
         <p>Deze week: <span id="weekTotal">0</span></p>
         <p>Deze maand: <span id="monthTotal">0</span></p>
+    </section>
+    <section>
+        <h2>Instellingen</h2>
+        Oranje vanaf: <input type="number" id="orangeLimit" value="1"><br>
+        Rood vanaf: <input type="number" id="redLimit" value="3"><br>
+        <button onclick="saveSettings()">Opslaan</button>
     </section>
 
     <button onclick="exportCSV()">📤 Export naar Excel</button>
